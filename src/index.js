@@ -11,7 +11,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/itens', itensRoutes)
 app.use('/pedidos', pedidosRoutes)
 app.use('/pedidositens', pedidosItensRoutes)
-
+app.get('/', (req, res)=> res.status(200).send({
+    message: 'bem vindo a API burger queen'
+}));
 app.get('*', (req, res)=> res.status(200).send({
     message: 'bem vindo a API burger queen'
 }));
