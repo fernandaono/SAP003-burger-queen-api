@@ -1,4 +1,3 @@
-//const { Sequelize } = require('sequelize');
 const express = require('express');
 const itensRoutes = require('./routes/itensRoutes')
 const pedidosRoutes = require('./routes/pedidosRoutes')
@@ -19,6 +18,6 @@ app.get('*', (req, res)=> res.status(200).send({
 
 const port = process.env.port || 3000;
 
-const server = app.listen(port, () =>{
-    console.log('está funfando')
+app.listen(port, () =>{
+    console.log('Server On')
 });

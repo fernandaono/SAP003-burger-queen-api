@@ -12,7 +12,7 @@ module.exports.getPedido = async (req, res) => {
     await models.pedidos.findAll({
         where:{
             id: req.params.pedidoId
-        }, include:['pedidos_itens','itens']    
+        }, include:['pedidos_itens']    
     }).then(pedidos => {
         res.json(pedidos[0])
     }).catch(error =>{

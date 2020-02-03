@@ -18,7 +18,7 @@ module.exports.getItem = async (req, res, next) => {
     }).catch(error => {
         res.json(error)
     })
-}
+};
 
 module.exports.addItem = async (req, res, next) => {
     await models.itens.create({
@@ -29,7 +29,7 @@ module.exports.addItem = async (req, res, next) => {
     }).catch(error => {
         res.json(error)
     })
-}
+};
 
 module.exports.updateItem = async (req, res, next) => {
     await models.itens.update({
@@ -38,8 +38,10 @@ module.exports.updateItem = async (req, res, next) => {
     }, {where:{id: req.params.itemId}
     }).then((itens) =>{
         res.json(itens[0])
-    });
-}
+    }).catch(error => {
+        res.json(error)
+    })
+};
 
 module.exports.removeItem = async (req, res, next) => {
     await models.itens.destroy({
@@ -48,6 +50,8 @@ module.exports.removeItem = async (req, res, next) => {
         }
     }).then(()=>{
         res.json({status:true})
+    }).catch(error => {
+        res.json(error)
     })
-}
+};
 
