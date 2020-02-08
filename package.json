@@ -2,9 +2,9 @@
   "name": "fernandaonoapi",
   "version": "1.0.0",
   "description": "## 1. Preâmbulo",
-  "main": "api/index.js",
+  "main": "./api/index.js",
   "scripts": {
-    "start": "node ./api/index.js",
+    "start": "babel-node ./api/index.js",
     "test": "jest",
     "dev": "nodemon  --exec babel-node ./api/index.js"
   },
