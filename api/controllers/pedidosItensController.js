@@ -1,4 +1,4 @@
-const models = require('../models/index')
+const models = require('../../models/index')
 
 module.exports.getPedidosItens = async (req, res) => {
     await models.pedidos_itens.findAll({

@@ -1,12 +1,12 @@
 {
-  "name": "bq-api-node",
+  "name": "fernandaonoapi",
   "version": "1.0.0",
   "description": "## 1. Preâmbulo",
-  "main": "src/index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./api/index.js",
     "test": "jest",
-    "dev": "nodemon  --exec babel-node ./src/index.js"
+    "dev": "nodemon  --exec babel-node ./api/index.js"
   },
   "keywords": [],
   "author": "",
@@ -25,9 +25,7 @@
     "sequelize": "^5.21.3",
     "sequelize-cli": "^5.5.1",
     "sqlite3": "^4.1.1",
-    "tedious": "^8.0.1"
-  },
-  "devDependencies": {
+    "tedious": "^8.0.1",
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
@@ -36,6 +34,8 @@
     "@babel/register": "^7.7.7",
     "@babel/runtime": "^7.7.7",
     "babel-loader": "^8.0.6",
+  },
+  "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1"
